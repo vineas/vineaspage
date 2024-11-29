@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .neon-text {
+      @apply text-cyan-300 font-bold; /* Sesuaikan dengan warna teks yang Anda inginkan */
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+    }
+    .paused{
+      animation-play-state: paused;
+    }
+    .VT323 {
+      font-family: 'VT323', monospace;
+      font-weight: 400;
+    }
+  }
