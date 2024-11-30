@@ -54,7 +54,7 @@ export const Skills = () => {
             <img
               src={tailwind}
               alt="tailwind"
-              className="w-12 md:w-auto h-auto max-w-[100px]"
+              className="w-12 md:w-auto h-auto max-w-[100px] object-contain"
             />
             <img
               src={bootstrap}
@@ -125,7 +125,7 @@ export const Skills = () => {
             <img
               src={tailwind}
               alt="tailwind"
-              className="w-12 md:w-auto h-auto max-w-[100px]"
+              className="w-12 md:w-auto h-auto max-w-[100px] object-contain"
             />
             <img
               src={bootstrap}
@@ -196,7 +196,7 @@ export const Skills = () => {
             <img
               src={tailwind}
               alt="tailwind"
-              className="w-12 md:w-auto h-auto max-w-[100px]"
+              className="w-12 md:w-auto h-auto max-w-[100px] object-contain"
             />
             <img
               src={bootstrap}
@@ -267,7 +267,7 @@ export const Skills = () => {
             <img
               src={tailwind}
               alt="tailwind"
-              className="w-12 md:w-auto h-auto max-w-[100px]"
+              className="w-12 md:w-auto h-auto max-w-[100px] object-contain"
             />
             <img
               src={bootstrap}
