@@ -1,13 +1,25 @@
 import photo from "../../../assets/img/alvienas.jpeg";
+import { motion } from "motion/react";
 
 export const About = () => {
   return (
     <div id="about" className="w-11/12 container mx-auto py-20">
-      <div className="min-h-screen md:h-screen  flex flex-col md:flex-row md:space-x-10">
-        <div className="content-center mx-auto w-4/5 md:w-1/2">
+      <div className="min-h-screen md:h-screen flex flex-col md:flex-row md:space-x-10">
+        <motion.div
+          className="content-center mx-auto w-4/5 md:w-1/2"
+          initial={{  opacity: 0 }}
+          whileInView={{  opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <img src={photo} alt="alvienas" className="rounded-full" />
-        </div>
-        <div className="content-center">
+        </motion.div>
+
+        <motion.div
+          className="content-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.3 }}
+        >
           <div className="mt-5">
             <h3 className="md:text-5xl text-4xl font-bold mb-5 md:text-justify">
               About Me
@@ -25,9 +37,8 @@ export const About = () => {
               learning, teamwork, and solving problems through innovative and
               creative solutions.
             </p>
-            <div></div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
