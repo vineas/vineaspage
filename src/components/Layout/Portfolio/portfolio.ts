@@ -27,7 +27,7 @@ const portfolioApps = [
     id: 5,
     title: "Niskala Studios",
     imageUrl: "/image/portofolio/apps/niskala.png",
-    link: "https://niskala-studio.vercel.app/",
+    link: "https://niskalastudio.vercel.app/",
   },
 ];
 
