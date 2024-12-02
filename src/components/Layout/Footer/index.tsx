@@ -17,7 +17,7 @@ export const Footer = () => {
             </a>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-400">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#" className="hover:underline mr-5">
                   Contact
                 </a>
               </li>
