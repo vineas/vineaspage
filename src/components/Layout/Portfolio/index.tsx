@@ -62,10 +62,12 @@ export const Portfolio = () => {
 
       {/* Apps Portfolio */}
       {activeTab === "web" && (
-        <motion.div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}>
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           {currentData.map((item) => (
             <CardPortfolio key={item.id}>
               <Link to={item.link}>
