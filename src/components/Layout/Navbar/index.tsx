@@ -27,8 +27,7 @@ export const Navbar: React.FC = () => {
         className="bg-gray-900 sticky z-50 top-0"
         initial={{  opacity: 0 }}
         whileInView={{  opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        >
+        transition={{ duration: 1.5 }}>
           <div className="">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
