@@ -4,6 +4,7 @@ import CardPortfolio from "../../Fragments/Portfolio/CardPortfolio";
 import PaginationPortfolio from "../../Fragments/Portfolio/PaginationPortfolio";
 import TabsPortfolio from "../../Fragments/Portfolio/TabsPortfolio";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 
 const { portfolioApps, portfolioDesign, portfolioVideo } = portfolios;
 
@@ -45,9 +46,14 @@ export const Portfolio = () => {
 
   return (
     <div id="portfolio" className="py-20 bg-white">
-      <div className="mb-12">
+      <motion.div
+        className="mb-12"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         <h3 className="text-5xl font-bold text-center mb-3">Portfolio</h3>
-      </div>
+      </motion.div>
       <TabsPortfolio
         tabs={tabs}
         activeTab={activeTab}
@@ -56,7 +62,10 @@ export const Portfolio = () => {
 
       {/* Apps Portfolio */}
       {activeTab === "web" && (
-        <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8">
+        <motion.div className="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}>
           {currentData.map((item) => (
             <CardPortfolio key={item.id}>
               <Link to={item.link}>
@@ -65,7 +74,7 @@ export const Portfolio = () => {
               </Link>
             </CardPortfolio>
           ))}
-        </div>
+        </motion.div>
       )}
 
       {/* Pagination */}
@@ -95,9 +104,12 @@ export const Portfolio = () => {
 
       {/* Design Portfolio */}
       {activeTab === "design" && (
-        <div
+        <motion.div
           className="md:container mx-auto justify-center"
           style={{ width: "280px" }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
         >
           {portfolioDesign.map((item) => (
             <CardPortfolio key={item.id}>
@@ -107,14 +119,17 @@ export const Portfolio = () => {
               </Link>
             </CardPortfolio>
           ))}
-        </div>
+        </motion.div>
       )}
 
       {/* Video Portfolio */}
       {activeTab === "video" && (
-        <div
+        <motion.div
           className="md:container mx-auto justify-center"
           style={{ width: "280px" }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
         >
           {portfolioVideo.map((item) => (
             <CardPortfolio key={item.id}>
@@ -124,7 +139,7 @@ export const Portfolio = () => {
               </Link>
             </CardPortfolio>
           ))}
-        </div>
+        </motion.div>
       )}
     </div>
   );
