@@ -4,6 +4,8 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { motion } from "motion/react";
+
 
 interface NavigationItem {
   name: string;
@@ -21,7 +23,12 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <Disclosure>
-        <div className="bg-gray-900 sticky z-50 top-0">
+        <motion.div 
+        className="bg-gray-900 sticky z-50 top-0"
+        initial={{  opacity: 0 }}
+        whileInView={{  opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        >
           <div className="">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
@@ -83,7 +90,7 @@ export const Navbar: React.FC = () => {
               </div>
             </DisclosurePanel>
           </div>
-        </div>
+        </motion.div>
       </Disclosure>
     </>
   );
