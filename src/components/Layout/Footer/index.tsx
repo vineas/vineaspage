@@ -21,6 +21,11 @@ export const Footer = () => {
                   Contact
                 </a>
               </li>
+              <li>
+                <a href="https://github.com/vineas" className="hover:underline">
+                  Github
+                </a>
+              </li>
             </ul>
           </div>
           <hr className="my-6  sm:mx-auto border-gray-700 lg:my-8" />
